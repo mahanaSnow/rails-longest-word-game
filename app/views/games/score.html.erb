@@ -1,0 +1,10 @@
+<% if @valid_word %>
+  <p>Congratulations! <%= @word %> is a valid word!</p>
+  <p>Your score: <%= @score %></p>
+<% else %>
+  <p>Sorry, <%= @word %> is not a valid word.</p>
+<% end %>
+
+<p>Total score: <%= session[:total_score] %></p>
+
+<%= link_to 'New game', new_path %>
